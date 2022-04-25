@@ -42,34 +42,14 @@ function score() {
   var result = 0;
   if (responseOneQ1.checked) {
     result++;
-  } 
+  }
   if (responseOneQ2.checked || responseForQ2.checked) {
     result++;
-  } 
-  if (result = 3) {
-    alert ("Bonne reponse");
-}else{
-  alert ("Mauvaise Reponse");
-};
-
-submitBtn.addEventListener("click", score);
-
-// submitBtn.addEventListener("click", function () {
-//   let result = 0;
-//   // Si Staline est chécké ==> result ++
-//   // Sinon afficher le message de reponse erronné
-//   if (responseOneQ1.checked) {
-//     result++;
-//     alert("Bonne Réponse")
-//   }else{
-//     alert("Mauvaise Réponse")
-//   };
-// //   // Si Jordan et Pippen sont checké ==> result ++
-// //   // Sinon afficher le message de reponse erronné
-// //   if (responseOneQ2.checked || responseForQ2.checked) {
-// //     result++;
-// //   };
-// //   // Si result = 3 ==> Bravo quiz bon travail
-// //   if (result = 3) {
-// //     alert("Bravo")
-// //   };
+  }
+  if (result === 2) {
+    alert("Bonne reponse");
+  } else {
+    alert("Mauvaise Reponse");
+  }
+}
+validationBtn.addEventListener("click", score);
