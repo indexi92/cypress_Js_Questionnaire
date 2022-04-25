@@ -1,18 +1,20 @@
 // Variables titres
-let title = document.getElementById("title");
-let questionOne = document.getElementById("questionOne");
-let questionTwo = document.getElementById("questionTwo");
+var title = document.getElementById("title");
+var questionOne = document.getElementById("questionOne");
+var questionTwo = document.getElementById("questionTwo");
 // Variables question 1
-let responseOneQ1 = document.getElementById("responseOneQ1");
-let responseTwoQ1 = document.getElementById("responseTwoQ1");
-let responseThreeQ1 = document.getElementById("responseThreeQ1");
+var responseOneQ1 = document.getElementById("responseOneQ1");
+var responseTwoQ1 = document.getElementById("responseTwoQ1");
+var responseThreeQ1 = document.getElementById("responseThreeQ1");
 // Variables question 2
-let responseOneQ2 = document.getElementById("responseOneQ2");
-let responseTwoQ2 = document.getElementById("responseTwoQ2");
-let responseThreeQ2 = document.getElementById("responseThreeQ2");
-let responseForQ2 = document.getElementById("responseForQ2");
+var responseOneQ2 = document.getElementById("responseOneQ2");
+var responseTwoQ2 = document.getElementById("responseTwoQ2");
+var responseThreeQ2 = document.getElementById("responseThreeQ2");
+var responseForQ2 = document.getElementById("responseForQ2");
 // Variable bouton
-let validationBtn = document.getElementById("validationBtn");
+var validationBtn = document.getElementById("validationBtn");
+
+// Fonction du Questionnaire
 [
   responseOneQ1,
   responseTwoQ1,
@@ -36,64 +38,38 @@ let validationBtn = document.getElementById("validationBtn");
   });
 });
 
-let submitBtn = document.getElementById("validationBtn");
+function score() {
+  var result = 0;
+  if (responseOneQ1.checked) {
+    result++;
+  } 
+  if (responseOneQ2.checked || responseForQ2.checked) {
+    result++;
+  } 
+  if (result = 3) {
+    alert ("Bonne reponse");
+}else{
+  alert ("Mauvaise Reponse");
+};
 
-submitBtn.addEventListener("click", function () {
-  let result = 0;
-  // Si Staline est chécké ==> result ++
-  // Sinon afficher le message de reponse erronné
+submitBtn.addEventListener("click", score);
 
-  // Si Jordan et Pippen sont checké ==> result ++
-  // Sinon afficher le message de reponse erronné
-
-  // Si result = 3 ==> Bravo quiz bon travail
-});
-
-/* 
-const quiz = [
-  {
-    question:
-      "Quel célèbre dictateur dirigea l’URSS du milieu des années 1920 à 1953 ?",
-    reponses: [
-      {
-        response: "Staline",
-        isValid: true,
-      },
-      {
-        response: "Trotski",
-        isValid: false,
-      },
-      {
-        response: "Lénine",
-        isValid: false,
-      },
-    ],
-  },
-  {
-    question: "Quels joueurs ont joué pour les Chicago Bulls ?",
-    reponses: [
-      {
-        response: "Jordan",
-        isValid: true,
-      },
-      {
-        response: "Stockton",
-        isValid: false,
-      },
-      {
-        response: "O'Neal",
-        isValid: false,
-      },
-      {
-        response: "Pippen",
-        isValid: true,
-      },
-    ],
-  },
-];
-
-
-quiz.forEach( (question, index) => {
-  let question = document.createElement('div')
-  question
-}) */
+// submitBtn.addEventListener("click", function () {
+//   let result = 0;
+//   // Si Staline est chécké ==> result ++
+//   // Sinon afficher le message de reponse erronné
+//   if (responseOneQ1.checked) {
+//     result++;
+//     alert("Bonne Réponse")
+//   }else{
+//     alert("Mauvaise Réponse")
+//   };
+// //   // Si Jordan et Pippen sont checké ==> result ++
+// //   // Sinon afficher le message de reponse erronné
+// //   if (responseOneQ2.checked || responseForQ2.checked) {
+// //     result++;
+// //   };
+// //   // Si result = 3 ==> Bravo quiz bon travail
+// //   if (result = 3) {
+// //     alert("Bravo")
+// //   };

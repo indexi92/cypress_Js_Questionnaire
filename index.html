@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf8">
-        <link rel="stylesheet" href="style.css">
-        <script src="index.js" defer></script>
-    </head>
+  <head>
+    <meta charset="utf8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
 
-    <body>
-        <!-- Titre de la page -->
-        <div id="title" class="titleOfThePage">
-            <h1>Questionnaire</h1><br>
-        </div>
-    
-        <!-- Question choix unique -->
-        <div id="questionOne" class="simpleChoice">
-        <h3> Quel célèbre dictateur dirigea l’URSS du milieu des années 1920 à 1953 ?</h3>
+  <body>
+    <!-- Titre de la page -->
+    <div id="title" class="titleOfThePage" data-cy="title">
+      <h1>Questionnaire</h1>
+      <br />
+    </div>
 
-            <input type="radio" name="qOne">
-            <label id="responseOneQ1" for="responseOne">Staline</label><br>
+    <!-- Question choix unique -->
+    <div id="questionOne" class="simpleChoice" data-cy="qOne">
+      <h3>
+        Quel célèbre dictateur dirigea l’URSS du milieu des années 1920 à 1953 ?
+      </h3>
 
-            <input type="radio" name="qOne">
-            <label id="responseTwoQ1" for="responseTwo">Trotski</label><br>
+      <input type="radio" name="qOne" data-cy="R1Q1" />
+      <label id="responseOneQ1" for="responseOne">Staline</label><br />
 
-            <input type="radio" name="qOne">
-            <label id="responseThreeQ1" for="responseThree">Lénine</label><br>
-        
-        </div>
-       
-        <!-- Question choix multiple -->
-        <div id="questionTwo" class="multipleChoice">
-        <h3>Quels joueurs ont joué pour les Chicago Bulls ?</h3>
-            <input type="checkBox" name="qTwo">
-            <label id="responseOneQ2" for="responseOne">Jordan</label><br>
+      <input type="radio" name="qOne" data-cy="R2Q1" />
+      <label id="responseTwoQ1" for="responseTwo">Trotski</label><br />
 
-            <input type="checkBox" name="qTwo">
-            <label id="responseTwoQ2" for="responseTwo">Stockton</label><br>
+      <input type="radio" name="qOne" data-cy="R3Q1" />
+      <label id="responseThreeQ1" for="responseThree">Lénine</label><br />
+    </div>
 
-            <input type="checkBox" name="qTwo">
-            <label id="responseThreeQ2" for="responseThree">O'Neal</label><br>
+    <!-- Question choix multiple -->
+    <div id="questionTwo" class="multipleChoice" data-cy="qTwo">
+      <h3>Quels joueurs ont joué pour les Chicago Bulls ?</h3>
+      <input type="checkBox" name="qTwo" data-cy="R1Q2" />
+      <label id="responseOneQ2" for="responseOne">Jordan</label><br />
 
-            <input type="checkBox" name="qTwo">
-            <label id="responseForQ2" for="responseFor">Pippen</label><br>
-        
-        </div>
+      <input type="checkBox" name="qTwo" data-cy="R2Q2" />
+      <label id="responseTwoQ2" for="responseTwo">Stockton</label><br />
 
-        <!-- Bouton de validation -->
-        <div id="validationBtn" class="validation">
-            <br><br><br><button type="submit">Valider vos réponses</button>
-        </div>
+      <input type="checkBox" name="qTwo" data-cy="R3Q2" />
+      <label id="responseThreeQ2" for="responseThree">O'Neal</label><br />
 
-    </body>
+      <input type="checkBox" name="qTwo" data-cy="R4Q2" />
+      <label id="responseForQ2" for="responseFor">Pippen</label><br />
+    </div>
+
+    <!-- Bouton de validation -->
+    <div id="validationBtn" class="validation" data-cy="validbtn">
+      <br /><br /><br /><button type="submit">Valider vos réponses</button>
+    </div>
+  </body>
 </html>
