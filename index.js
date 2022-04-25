@@ -43,10 +43,10 @@ function score() {
   if (responseOneQ1.checked) {
     result++;
   }
-  if (responseOneQ2.checked || responseForQ2.checked) {
+  if (responseOneQ2.checked && responseForQ2.checked) {
     result++;
   }
-  if (result === 2) {
+  if (result === 1) {
     alert("Bonne reponse");
   } else {
     alert("Mauvaise Reponse");
