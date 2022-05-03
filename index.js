@@ -46,7 +46,7 @@ function score() {
   if (responseOneQ2.checked && responseForQ2.checked) {
     result++;
   }
-  if (result === 1) {
+  if (result === 2) {
     alert("Bonne reponse");
   } else {
     alert("Mauvaise Reponse");

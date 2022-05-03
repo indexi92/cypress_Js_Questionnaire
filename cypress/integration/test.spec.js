@@ -2,7 +2,7 @@
 
 describe("Q&RVisible", () => {
   it("testQ&RVisible", () => {
-    cy.visit("index.html");
+    cy.visit("/");
     //Questions
     cy.get("[data-cy=qOne]").should("be.visible");
     cy.get("[data-cy=qTwo]").should("be.visible");
@@ -20,7 +20,7 @@ describe("Q&RVisible", () => {
 
 describe("bonneRep", () => {
   it("testbonneRep", () => {
-    cy.visit("index.html");
+    cy.visit("/");
     cy.get("[data-cy=R1Q1]").check();
     cy.get("#responseOneQ1").should("contain.text", "Staline");
     cy.get("[data-cy=R1Q2]").check();
@@ -40,6 +40,7 @@ describe("mauvaiseRep", () => {
     cy.get("[data-cy=R3Q1]").check();
     cy.get("[data-cy=R2Q2]").check();
     cy.get("[data-cy=R4Q2]").check();
+    cy.get("[data-cy=validbtn]").click();
     cy.on("window:alert", (text) => {
       expect(text).to.contain("Mauvaise Reponse");
     });
